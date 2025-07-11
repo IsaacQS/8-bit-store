@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>8BitStore</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navegacion {
+            background-color: #222;
+            padding: 10px 20px;
+        }
+
+        .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu li {
+            display: inline-block;
+        }
+
+        .menu a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer; 
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #66ffe0;
+            text-decoration: underline;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            background-image: url('https://www.gameaccessibilitynexus.com/wp-content/uploads/2024/01/The-Last-of-Us-Part-2-Remastered-Header.jpg');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+        }
+
+        .banner-contenido {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .banner-contenido h1 {
+            color: #00ffcc;
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 0;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+            user-select: none;
+        }
+
+        .buscador {
+            margin: 30px auto 10px;
+            text-align: center;
+        }
+
+        .buscador input[type="text"] {
+            width: 60%;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 8px;
+            border: none;
+        }
+
+        .productos-destacados {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .producto {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            color: #ccc;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .producto img {
+            max-width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            max-height: 180px;
+        }
+
+        .pie {
+            margin-top: 50px;
+            background-color: #111;
+            padding: 20px;
+            color: gray;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .redes p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navegacion">
+        <ul class="menu">
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="consolas.html">Consolas</a></li>
+            <li><a href="lanzamientos.html">Lanzamientos</a></li>
+            <li><a href="resenas.html">Reseñas</a></li>
+            <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="login.html">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+
+    <section class="banner">
+        <div class="banner-contenido">
+            <h1>Bienvenido a 8BitStore</h1>
+        </div>
+    </section>
+
+    <div class="buscador">
+        <input type="text" placeholder="Buscar productos" />
+    </div>
+
+    <section class="productos-destacados">
+        <div class="producto">
+            <img src="https://www.muycomputer.com/wp-content/uploads/2025/03/Nintendo-Switch-2-2-1-1000x600.jpg" alt="Nintendo Switch 2" />
+            Nintendo Switch 2
+        </div>
+        <div class="producto">
+            <img src="https://media.wired.com/photos/65e886e2d5fa593b511ea02a/1:1/w_2000,h_2000,c_limit/ps5.jpg" alt="PlayStation 5" />
+            PlayStation 5
+        </div>
+        <div class="producto">
+            <img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:240,cw:1440,ch:1080,q:80,w:1440/73sXr4f93ux2KTVhFjWJFV.jpg" alt="Xbox Series X" />
+            Xbox Series X
+        </div>
+        <div class="producto">
+            <img src="https://cdn.cloudflare.steamstatic.com/steamdeck/images/video/overview_oled.jpg" alt="Steam Deck OLED" />
+            Steam Deck OLED
+        </div>
+    </section>
+
+    <footer class="pie">
+        <div class="redes">
+            <p>Visit us on Facebook</p>
+            <p>Visit us on Instagram</p>
+            <p>Visit us on TikTok</p>
+        </div>
+        <div class="copyright">
+            <p>© 2025 8BitStore</p>
+        </div>
+    </footer>
+
+</body>
+</html>

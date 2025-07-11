@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Carrito - 8BitStore</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navegacion {
+            background-color: #222;
+            padding: 10px 20px;
+        }
+
+        .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu li {
+            display: inline-block;
+        }
+
+        .menu a {
+            color: #00ffcc;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer; 
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #66ffe0;
+            text-decoration: underline;
+        }
+
+        .contenedor-carrito {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .producto {
+            background-color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .producto img {
+            max-width: 100%;
+            border-radius: 8px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .producto h3 {
+            margin: 10px 0 5px;
+            color: #00ffcc;
+        }
+
+        .producto p {
+            margin: 5px 0;
+        }
+
+        .boton-eliminar {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .boton-eliminar i {
+            margin-right: 5px;
+        }
+
+        .pie {
+            margin-top: 50px;
+            background-color: #111;
+            padding: 20px;
+            color: gray;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .redes p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navegacion">
+        <ul class="menu">
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="consolas.html">Consolas</a></li>
+            <li><a href="lanzamientos.html">Lanzamientos</a></li>
+            <li><a href="resenas.html">Reseñas</a></li>
+            <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+            <li><a href="login.html">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+
+    <h1 style="text-align:center; padding-top:20px;">Carrito de Compras</h1>
+
+    <div class="contenedor-carrito">
+        <!-- Ejemplo de producto, esto se repite dinámicamente con Thymeleaf -->
+        <div class="producto" th:each="prod : ${productos}">
+            <img th:src="@{${prod.imagenUrl}}" alt="Producto">
+            <h3 th:text="${prod.nombre}">Nombre del producto</h3>
+            <p th:text="'Precio: $' + ${prod.precio}">Precio</p>
+            <form th:action="@{/carrito/eliminar}" method="post">
+                <input type="hidden" name="id" th:value="${prod.id}" />
+                <button class="boton-eliminar" type="submit">
+                    <i class="fas fa-trash"></i> Eliminar del carrito
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="pie">
+        <div class="redes">
+            <p>Visit us on Facebook</p>
+            <p>Visit us on Instagram</p>
+            <p>Visit us on TikTok</p>
+        </div>
+        <div class="copyright">
+            <p>© 2025 8BitStore</p>
+        </div>
+    </footer>
+</body>
+</html>
