@@ -1,0 +1,18 @@
+[33m3355e3d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m HEAD@{0}: rebase (abort): returning to refs/heads/master
+[33mc8e5810[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: pull --rebase (start): checkout c8e5810e1f3b01b2a34df7484b051248a913e809
+[33m3355e3d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m HEAD@{2}: rebase (abort): returning to refs/heads/master
+[33mc8e5810[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{3}: pull --rebase origin master (start): checkout c8e5810e1f3b01b2a34df7484b051248a913e809
+[33m3355e3d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m HEAD@{4}: rebase (abort): returning to refs/heads/master
+[33mc8e5810[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{5}: pull --rebase origin master (start): checkout c8e5810e1f3b01b2a34df7484b051248a913e809
+[33m3355e3d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m HEAD@{6}: commit: Tu mensaje describiendo los cambios
+[33m709c81a[m HEAD@{7}: rebase (abort): returning to refs/heads/master
+[33mc8e5810[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{8}: pull origin master --rebase (start): checkout c8e5810e1f3b01b2a34df7484b051248a913e809
+[33m709c81a[m HEAD@{9}: rebase (abort): returning to refs/heads/master
+[33mc8e5810[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{10}: pull origin master --rebase (start): checkout c8e5810e1f3b01b2a34df7484b051248a913e809
+[33m709c81a[m HEAD@{11}: commit: Proyecto limpio, sin submódulo
+[33md3f7c41[m HEAD@{12}: commit: Mejora de estilos y estética general de la página.   Se activó la funcionalidad de consolas con detalles e integración.   Corrección de diversos errores y configuración inicial de la base de datos.
+[33m8cb526b[m HEAD@{13}: commit: Mejora de estilos y estética, función consolas activada, solución a errores e instancia base de datos
+[33m8d6e361[m HEAD@{14}: reset: moving to HEAD
+[33m8d6e361[m HEAD@{15}: commit: Mejora de estilos y estética general de la página.   Se activó la funcionalidad de consolas con detalles e integración.   Corrección de diversos errores y configuración inicial de la base de datos.
+[33m6f5c9e9[m HEAD@{16}: checkout: moving from master to master
+[33m6f5c9e9[m HEAD@{17}: branch: Created from refs/remotes/origin/master
