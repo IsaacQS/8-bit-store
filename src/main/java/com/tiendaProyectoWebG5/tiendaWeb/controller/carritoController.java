@@ -1,8 +1,6 @@
-
 package com.tiendaProyectoWebG5.tiendaWeb.controller;
 
 import com.tiendaProyectoWebG5.tiendaWeb.producto;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.springframework.stereotype.Controller;
@@ -21,6 +19,6 @@ public class carritoController {
         );
 
         model.addAttribute("productos", productos);
-        return "carrito"; //
+        return "carrito"; 
     }
 }

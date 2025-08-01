@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8" />
         <title>Carrito - 8BitStore</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
         <link rel="stylesheet" th:href="@{/css/carrito.css}" />
     </head>
     <body>
@@ -24,10 +24,9 @@
             <h1 class="titulo">Carrito de Compras</h1>
         </div>
 
-
         <div class="contenedor-carrito">
             <div class="producto" th:each="prod : ${productos}">
-                <img th:src="@{${prod.imagenUrl}}" alt="Producto">
+                <img th:src="${prod.imagenUrl}" alt="Producto" style="max-width: 200px; max-height: 200px; object-fit: contain;" />
                 <h3 th:text="${prod.nombre}">Nombre del producto</h3>
                 <p th:text="'Precio: $' + ${prod.precio}">Precio</p>
                 <form th:action="@{/carrito/eliminar}" method="post">
