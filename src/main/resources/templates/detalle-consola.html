@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title th:text="'Detalle ' + ${nombre} + ' - 8BitStore'">Detalle Consola</title>
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="/css/detalle-consola.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
+    </head>
+    <body>
+
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a th:href="@{/index}">Inicio</a></li>
+                <li><a th:href="@{/carrito}">Carrito</a></li>
+                <li><a th:href="@{/consolas}">Consolas</a></li>
+                <li><a th:href="@{/lanzamientos}">Lanzamientos</a></li>
+                <li><a th:href="@{/resenas}">Reseñas</a></li>
+                <li><a th:href="@{/sobre-nosotros}">Sobre nosotros</a></li>
+                <li><a th:href="@{/login}">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+
+        <main class="detalle-container">
+            <h1 th:text="${nombre}"></h1>
+            <p th:text="${info}"></p>
+
+            <section class="detalles-lista">
+                <h3>Juegos destacados</h3>
+                <ul>
+                    <li th:each="juego : ${juegos}" th:text="${juego}"></li>
+                </ul>
+            </section>
+
+            <section class="detalles-lista">
+                <h3>Accesorios recomendados</h3>
+                <ul>
+                    <li th:each="accesorio : ${accesorios}" th:text="${accesorio}"></li>
+                </ul>
+            </section>
+
+            <a th:href="${enlaceOficial}" target="_blank" class="btn btn-primary">Visitar sitio oficial</a>
+        </main>
+
+    </body>
+</html>
